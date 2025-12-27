@@ -6,7 +6,8 @@ By: Arjun Phanse
 In this project, I researched how well computer vision models (ConvNet, ResNet18, DINOv2) would be able to identify doodle images from Google's [Quick Draw](https://github.com/googlecreativelab/quickdraw-dataset?tab=readme-ov-file) dataset. Users can draw doodles, and receive the top five predicted classifications from each of the models.
 
 ## Demo
-![a](images/doodle-recognition-demo.mov)
+
+https://github.com/user-attachments/assets/d7620404-5420-46d9-96c9-f3fe4b1f482b
 
 ## Setup
 First, download the data 50 classes from the Quick Draw dataset.
