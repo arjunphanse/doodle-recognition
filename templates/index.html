@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Doodle Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="draw-area">
+            <h1>Doodle Recognition</h1>
+            <canvas id="canvas" width="280" height="280"></canvas>
+            <div class="controls">
+                <button id="clear-btn">Clear</button>
+                <button id="predict-btn">Predict</button>
+            </div>
+            <p class="hint">Draw with mouse/touch. The sketch is downscaled to 28×28 for the model.</p>
+        </div>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Top predictions:</h2>
+                <canvas id="preview" width="28" height="28"></canvas>
+            </div>
+            <div class="pred-columns">
+                <div>
+                    <h3>ConvNet</h3>
+                    <div class="topbar topbar-conv">
+                        <div id="bar-conv" class="topbar-fill"></div>
+                    </div>
+                    <ol id="predictions-conv"></ol>
+                </div>
+                <div>
+                    <h3>ResNet18</h3>
+                    <div class="topbar topbar-res">
+                        <div id="bar-res" class="topbar-fill"></div>
+                    </div>
+                    <ol id="predictions-res"></ol>
+                </div>
+                <div>
+                    <h3>DINOv2</h3>
+                    <div class="topbar topbar-dino">
+                        <div id="bar-dino" class="topbar-fill"></div>
+                    </div>
+                    <ol id="predictions-dino"></ol>
+                </div>
+            </div>
+            <div class="classes-panel">
+                <button id="classes-toggle" class="secondary">Show class list</button>
+                <div id="classes-list" class="classes-list hidden">
+                    <ul id="classes-ul"></ul>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <script>
+        const CLASSES = {{ classes|tojson }};
+    </script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
