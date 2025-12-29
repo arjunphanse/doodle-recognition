@@ -5,8 +5,11 @@ By: Arjun Phanse
 ## Overview
 In this project, I researched the ability of computer vision models (ConvNet, ResNet18, DINOv2-Small) to identify doodle images from Google's Quick Draw dataset. I built an application to allow users to draw doodles and receive predicted classifications from each of the models I trained.
 
+Link to model weights: https://huggingface.co/arjunphanse/doodle-recognition-models
+
 ## Demo
-![a](images/doodle-recognition-demo.mov)
+
+https://github.com/user-attachments/assets/d7620404-5420-46d9-96c9-f3fe4b1f482b
 
 ## Training
 
